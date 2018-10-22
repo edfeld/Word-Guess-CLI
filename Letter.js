@@ -12,11 +12,16 @@ var Letter = function(strLetter) {
     this.isLtrGuess = false;
 
     this.getDisplayLtr = function() {
-        if (strLtr === " ") {
+        console.log("calling getDisplayLtr")
+        console.log("bool: ", this.isLtrGuess)
+        if (this.strLtr === " ") {
+            console.log("return space");
             return " ";
         } else if (this.isLtrGuess === true) {
-          return strltr;
+            console.log("bool2: ", this.isLtrGuess);
+          return this.strLtr;
       } else {
+          console.log("Returning underscore");
         return "_";
       }
     };
@@ -25,9 +30,14 @@ var Letter = function(strLetter) {
         this.strltr = strletter;
     }
 
+    this.getLtr = function() {
+        return this.strLtr;
+    }
+
     // set the value of isltrGuess. 
     this.setIsLtrGuess = function( isLetterGuess) {
         this.isLtrGuess = isLetterGuess;
+        console.log("set isLtrGuess: ", this.isLtrGuess);
     }
 
     this.getIsLtrGuess = function() {
