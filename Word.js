@@ -7,21 +7,21 @@ var Letter = require("./Letter");
 var Word = function(strWord) {
     console.log("strWord: ", strWord);
     arrString = strWord.split("");
-    console.log("arrString: ", arrString);
+    // console.log("arrString: ", arrString);
     let arrWord = [];
     for (let i = 0; i < arrString.length; i++) {
         const element = new Letter(arrString[i]);
-        console.log("14 letter: ", element.getLtr());
+        // console.log("14 letter: ", element.getLtr());
         arrWord.push(element);
     }
-    console.log("arrWord: ", arrWord);
+    // console.log("arrWord: ", arrWord);
 
     this.displayPuzzle = function() {
         console.log("displayPuzzle");
         let strLetterDisplay = "";
         arrWord.forEach(letter => {
-            console.log("getletter: ", letter.getLtr());
-            console.log("letter: ", letter.getDisplayLtr());
+            // console.log("getletter: ", letter.getLtr());
+            // console.log("letter: ", letter.getDisplayLtr());
             strLetterDisplay += letter.getDisplayLtr();
         });
         // console.log(strLetterDisplay.split(""));
@@ -40,7 +40,17 @@ var Word = function(strWord) {
         });
     }
 
-    
+    this.isPuzzleSolved = function () {
+        arrWord.forEach(letter => {
+            // if one of the letters has not been guessed, return false
+            if (letter.getIsLtrGuess() === false) {
+                return false;
+            }
+            return true;
+        });
+    }
+
+
   
   };
 

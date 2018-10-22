@@ -1,27 +1,27 @@
 // Create the Letter constructor
 var Letter = function(strLetter) {
     //
-
+    // this represents each letter
     this.strLtr;
     if (strLetter.search(/[a-zA-Z\s]/g) > -1) {
         this.strLtr = strLetter
-        console.log("strLtr: ", this.strLtr);
+        // console.log("strLtr: ", this.strLtr);
 
     }
-    
+    // this represents whether the letter has been guessed by the user
     this.isLtrGuess = false;
 
     this.getDisplayLtr = function() {
-        console.log("calling getDisplayLtr")
-        console.log("bool: ", this.isLtrGuess)
+        // console.log("calling getDisplayLtr")
+        // console.log("bool: ", this.isLtrGuess)
         if (this.strLtr === " ") {
-            console.log("return space");
+            // console.log("return space");
             return " ";
         } else if (this.isLtrGuess === true) {
-            console.log("bool2: ", this.isLtrGuess);
+            // console.log("bool2: ", this.isLtrGuess);
           return this.strLtr;
       } else {
-          console.log("Returning underscore");
+        //   console.log("Returning underscore");
         return "_";
       }
     };
@@ -37,7 +37,7 @@ var Letter = function(strLetter) {
     // set the value of isltrGuess. 
     this.setIsLtrGuess = function( isLetterGuess) {
         this.isLtrGuess = isLetterGuess;
-        console.log("set isLtrGuess: ", this.isLtrGuess);
+        // console.log("set isLtrGuess: ", this.isLtrGuess);
     }
 
     this.getIsLtrGuess = function() {
