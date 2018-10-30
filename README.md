@@ -11,6 +11,8 @@ The user has a limit of between 8 and 10 'wrong' guesses to complete the puzzle 
 
 The program shows the correct answer after the limit of wrong guesses has been reached.
 
+This game utilizes object constructors for Words and letters, which are contained in separate files.
+
 Below is the link to my demostration video:
 
 https://drive.google.com/file/d/1Bxn9C6SPIdVPphEuh7S6GDVUkuCZayGo/view
